@@ -1,120 +1,111 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Exclude Flies">
-      <UniqueIdentifier>{6f9452a3-52c6-4956-a7dc-33ada62b559f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\engine">
-      <UniqueIdentifier>{22ee3eaa-26b6-420f-bccb-0f2e0c17eeeb}</UniqueIdentifier>
+      <UniqueIdentifier>{38237033-a6bb-4bed-85cb-9e6078a2160a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\engine">
-      <UniqueIdentifier>{ae11e1ea-6351-44e5-8768-8688e29347af}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\hijack">
-      <UniqueIdentifier>{d0eb8158-752c-4885-acac-5f44804af6b6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\hijack">
-      <UniqueIdentifier>{dd95b6cc-b6fc-4242-a078-e2d2f477e9bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\tree">
-      <UniqueIdentifier>{ffa1b20f-745c-4f0d-a02c-e57caa1bf835}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\util">
-      <UniqueIdentifier>{625113e6-c742-424f-931f-d6bd4e0355c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\util">
-      <UniqueIdentifier>{5c977ad9-e946-419a-9a91-8f4abfdfac5e}</UniqueIdentifier>
+      <UniqueIdentifier>{a19d74f7-04b8-4f4d-8bc4-1030778695ee}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\engine\mono">
-      <UniqueIdentifier>{b9893824-92c3-44d1-8f4e-b7ef7e6fbac6}</UniqueIdentifier>
+      <UniqueIdentifier>{6965f130-f7d5-4bde-87e8-7d5e54ee5b25}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\engine\ppsspp">
-      <UniqueIdentifier>{80874f09-3708-4b27-9232-360aa2e17dbf}</UniqueIdentifier>
+      <UniqueIdentifier>{3814229a-68ef-4240-8484-7a302d85114e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared">
-      <UniqueIdentifier>{2f91fba2-69a4-4ca7-b65e-c94509d961db}</UniqueIdentifier>
+    <Filter Include="Header Files\hijack">
+      <UniqueIdentifier>{63cbe0a2-5a7f-4c12-805c-d16715dd2b49}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared\winmaker">
-      <UniqueIdentifier>{a1f0f2c8-e4fb-41bc-9559-3123502950e0}</UniqueIdentifier>
+    <Filter Include="Header Files\tree">
+      <UniqueIdentifier>{bd2ca1a0-0531-47a6-914e-4ddcb1dd4824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{e06b5855-dc35-4c6b-a01b-121d07b5af86}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared">
-      <UniqueIdentifier>{52ffb15b-24d1-4856-b74a-54d160a12755}</UniqueIdentifier>
+      <UniqueIdentifier>{840d4bd3-96c4-4565-b382-fd97c4693721}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\winmaker">
-      <UniqueIdentifier>{6257a35a-54d8-4958-beb5-4e35e727a8d7}</UniqueIdentifier>
+      <UniqueIdentifier>{886e9476-329f-4778-bdf4-ddba288d34d3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\winmutex">
-      <UniqueIdentifier>{93ffa7cc-b764-469f-a19f-8b91b36bc868}</UniqueIdentifier>
+      <UniqueIdentifier>{6e9aac27-336b-4541-adc3-a694846dbb5b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\windbg">
-      <UniqueIdentifier>{ec8a78f6-59a0-46e5-b6ab-1bc611611d3d}</UniqueIdentifier>
+      <UniqueIdentifier>{f8d42b27-2f7a-426b-bd21-b210928e3830}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\sakurakit">
-      <UniqueIdentifier>{55feeb69-1b7b-475f-8026-eba270479f7e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\shared\windbg">
-      <UniqueIdentifier>{5554d9fb-7ed4-4c46-893c-928aae3c8d6c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\shared\winseh">
-      <UniqueIdentifier>{d1ae97ed-0a94-4d0a-8e50-28b345ba3438}</UniqueIdentifier>
+      <UniqueIdentifier>{b23a3ff7-eead-444e-bddf-ea71c7ae250d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\winseh">
-      <UniqueIdentifier>{78204db6-658e-40a2-9360-c2388d889947}</UniqueIdentifier>
+      <UniqueIdentifier>{e3aa8ac4-8fd6-4907-8cd8-015120b131fc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\ccutil">
-      <UniqueIdentifier>{3ae47d89-d457-46db-888a-68f9cb77d176}</UniqueIdentifier>
+      <UniqueIdentifier>{b65f13dc-65e9-4a02-9f78-aa935887657a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\cpputil">
-      <UniqueIdentifier>{ce01d73f-b2e5-4d29-a2ee-0539924d4f42}</UniqueIdentifier>
+      <UniqueIdentifier>{62450d6e-7534-438e-b169-69f48778e141}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\hashutil">
-      <UniqueIdentifier>{36038a4c-a879-475d-b2ad-b7e5ad7ddeef}</UniqueIdentifier>
+      <UniqueIdentifier>{79bcdb4f-eeb3-431c-8d57-2d31ff6b5f6c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\memdbg">
-      <UniqueIdentifier>{9ece7744-ccee-495a-bebf-2759e11c87bf}</UniqueIdentifier>
+      <UniqueIdentifier>{3e7f2e6c-2ae9-460e-b805-0473b32a304e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\mono">
-      <UniqueIdentifier>{4eb4df81-ee7c-4afe-8827-8e28bde603f0}</UniqueIdentifier>
+      <UniqueIdentifier>{e9797e68-6f3e-4aca-8bf2-e9da2e45c2bf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\ntinspect">
-      <UniqueIdentifier>{53290e72-3c67-40e7-ac17-8d797f3c1941}</UniqueIdentifier>
+      <UniqueIdentifier>{3cc730b5-2ed5-4599-9441-2a8676461a0d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\shared\winversion">
-      <UniqueIdentifier>{b70c7c03-4f3c-4bd6-bcfe-5f93b9227696}</UniqueIdentifier>
+      <UniqueIdentifier>{9ea7761e-299c-41e4-801e-f7817834c7f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d3ac0c99-7697-45ac-868d-7732f5eaefe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{74128364-02f1-4bbd-a18a-6dd0d27445a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hijack">
+      <UniqueIdentifier>{9fc862bd-ae65-4c1f-a0b1-c4095bdcc995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{9859a22e-d950-4692-b6e1-de3ac8447f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared">
+      <UniqueIdentifier>{d53e76b2-9eb8-45b4-8c59-23af64c9773a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\winmaker">
+      <UniqueIdentifier>{2df21b5a-267b-4e3a-bb41-e2ac5818fa3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\windbg">
+      <UniqueIdentifier>{afe75aca-9e07-46bf-90ef-e77ff0494730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\winseh">
+      <UniqueIdentifier>{68d20d83-6c9d-40e4-b300-78e0df24b570}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\shared\winversion">
-      <UniqueIdentifier>{7ec419f7-8042-4fb4-b3c5-8da4a62b58dc}</UniqueIdentifier>
+      <UniqueIdentifier>{f0671240-cb36-49e5-98d4-01468e6da240}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\shared\memdbg">
-      <UniqueIdentifier>{88784d98-ac2e-49f8-b28f-8abb9be79a42}</UniqueIdentifier>
+      <UniqueIdentifier>{0febdb08-7a07-424f-a8ca-89427df98747}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\shared\ntinspect">
-      <UniqueIdentifier>{56efefa0-21ce-4c60-a425-00141469b117}</UniqueIdentifier>
+      <UniqueIdentifier>{238259b3-115d-48d0-bb1c-02187bcbe657}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\shared\disasm">
-      <UniqueIdentifier>{9d6897e6-4564-461d-a29c-9dd154205db7}</UniqueIdentifier>
+      <UniqueIdentifier>{ff10e83d-5ca0-416e-89b3-e4cc36690b5c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\const.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\except.h">
@@ -135,10 +126,10 @@
     <ClInclude Include="src\engine\pchooks.h">
       <Filter>Header Files\engine</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\mono\types.h">
+    <ClInclude Include="src\engine\mono\funcinfo.h">
       <Filter>Header Files\engine\mono</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\mono\funcinfo.h">
+    <ClInclude Include="src\engine\mono\types.h">
       <Filter>Header Files\engine\mono</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\ppsspp\funcinfo.h">
@@ -162,8 +153,11 @@
     <ClInclude Include="..\Shared\winmutex\winmutex.h">
       <Filter>Header Files\shared\winmutex</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\sakurakit\skdebug.h">
-      <Filter>Header Files\shared\sakurakit</Filter>
+    <ClInclude Include="..\Shared\windbg\hijack.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\inject.h">
+      <Filter>Header Files\shared\windbg</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\windbg\unload.h">
       <Filter>Header Files\shared\windbg</Filter>
@@ -177,26 +171,14 @@
     <ClInclude Include="..\Shared\windbg\windbg_p.h">
       <Filter>Header Files\shared\windbg</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\windbg\hijack.h">
-      <Filter>Header Files\shared\windbg</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\windbg\inject.h">
-      <Filter>Header Files\shared\windbg</Filter>
+    <ClInclude Include="..\Shared\sakurakit\skdebug.h">
+      <Filter>Header Files\shared\sakurakit</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\winseh\winseh.h">
       <Filter>Header Files\shared\winseh</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\ccutil\ccmacro.h">
       <Filter>Header Files\shared\ccutil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppstring.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cpptype.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppunicode.h">
-      <Filter>Header Files\shared\cpputil</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\cpputil\cppcstring.h">
       <Filter>Header Files\shared\cpputil</Filter>
@@ -213,16 +195,25 @@
     <ClInclude Include="..\Shared\cpputil\cpppath.h">
       <Filter>Header Files\shared\cpputil</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\hashutil\hashutil.h">
-      <Filter>Header Files\shared\hashutil</Filter>
+    <ClInclude Include="..\Shared\cpputil\cppstring.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cpptype.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cppunicode.h">
+      <Filter>Header Files\shared\cpputil</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\hashutil\hashstr.h">
       <Filter>Header Files\shared\hashutil</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\memdbg\memsearch.h">
-      <Filter>Header Files\shared\memdbg</Filter>
+    <ClInclude Include="..\Shared\hashutil\hashutil.h">
+      <Filter>Header Files\shared\hashutil</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\memdbg\memdbg.h">
+      <Filter>Header Files\shared\memdbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\memdbg\memsearch.h">
       <Filter>Header Files\shared\memdbg</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\mono\monoobject.h">
@@ -239,36 +230,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VNRHook.cpp">
-      <Filter>Exclude Flies</Filter>
-    </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Exclude Flies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\pipe.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\engine.cc">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\match.cc">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\pchooks.cc">
-      <Filter>Source Files\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\hijack\texthook.cc">
-      <Filter>Source Files\hijack</Filter>
-    </ClCompile>
-    <ClCompile Include="src\util\util.cc">
-      <Filter>Source Files\util</Filter>
-    </ClCompile>
     <ClCompile Include="..\Shared\winmaker\winmaker.cc">
       <Filter>Source Files\shared\winmaker</Filter>
     </ClCompile>
@@ -281,12 +242,6 @@
     <ClCompile Include="..\Shared\windbg\unload.cc">
       <Filter>Source Files\shared\windbg</Filter>
     </ClCompile>
-    <ClCompile Include="..\Shared\winseh\winseh.cc">
-      <Filter>Source Files\shared\winseh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Shared\winseh\winseh_safe.cc">
-      <Filter>Source Files\shared\winseh</Filter>
-    </ClCompile>
     <ClCompile Include="..\Shared\winversion\winversion.cc">
       <Filter>Source Files\shared\winversion</Filter>
     </ClCompile>
@@ -298,6 +253,28 @@
     </ClCompile>
     <ClCompile Include="..\Shared\disasm\disasm.cc">
       <Filter>Source Files\shared\disasm</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cc" />
+    <ClCompile Include="src\pipe.cc" />
+    <ClCompile Include="src\util\util.cc" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\Shared\winseh\winseh_safe.cc">
+      <Filter>Source Files\shared\winseh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\winseh\winseh.cc">
+      <Filter>Source Files\shared\winseh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\engine.cc">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\match.cc">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\pchooks.cc">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hijack\texthook.cc">
+      <Filter>Source Files\hijack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
