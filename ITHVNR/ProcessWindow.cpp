@@ -63,6 +63,7 @@ void ProcessWindow::RefreshProcess()
 				{
 					WCHAR buffer[256];
 					std::swprintf(buffer, L"%d", pid);
+					if (wcsstr(path, L"\\") == NULL) continue;
 					PWCHAR name = wcsrchr(path, L'\\') + 1;
 					item.pszText = buffer;
 					item.lParam = pid;
