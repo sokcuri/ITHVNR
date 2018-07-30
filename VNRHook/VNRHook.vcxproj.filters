@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Exclude Flies">
+      <UniqueIdentifier>{6f9452a3-52c6-4956-a7dc-33ada62b559f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{22ee3eaa-26b6-420f-bccb-0f2e0c17eeeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine">
+      <UniqueIdentifier>{ae11e1ea-6351-44e5-8768-8688e29347af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hijack">
+      <UniqueIdentifier>{d0eb8158-752c-4885-acac-5f44804af6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\hijack">
+      <UniqueIdentifier>{dd95b6cc-b6fc-4242-a078-e2d2f477e9bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tree">
+      <UniqueIdentifier>{ffa1b20f-745c-4f0d-a02c-e57caa1bf835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{625113e6-c742-424f-931f-d6bd4e0355c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{5c977ad9-e946-419a-9a91-8f4abfdfac5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\mono">
+      <UniqueIdentifier>{b9893824-92c3-44d1-8f4e-b7ef7e6fbac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\ppsspp">
+      <UniqueIdentifier>{80874f09-3708-4b27-9232-360aa2e17dbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared">
+      <UniqueIdentifier>{2f91fba2-69a4-4ca7-b65e-c94509d961db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\winmaker">
+      <UniqueIdentifier>{a1f0f2c8-e4fb-41bc-9559-3123502950e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared">
+      <UniqueIdentifier>{52ffb15b-24d1-4856-b74a-54d160a12755}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\winmaker">
+      <UniqueIdentifier>{6257a35a-54d8-4958-beb5-4e35e727a8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\winmutex">
+      <UniqueIdentifier>{93ffa7cc-b764-469f-a19f-8b91b36bc868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\windbg">
+      <UniqueIdentifier>{ec8a78f6-59a0-46e5-b6ab-1bc611611d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\sakurakit">
+      <UniqueIdentifier>{55feeb69-1b7b-475f-8026-eba270479f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\windbg">
+      <UniqueIdentifier>{5554d9fb-7ed4-4c46-893c-928aae3c8d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\winseh">
+      <UniqueIdentifier>{d1ae97ed-0a94-4d0a-8e50-28b345ba3438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\winseh">
+      <UniqueIdentifier>{78204db6-658e-40a2-9360-c2388d889947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\ccutil">
+      <UniqueIdentifier>{3ae47d89-d457-46db-888a-68f9cb77d176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\cpputil">
+      <UniqueIdentifier>{ce01d73f-b2e5-4d29-a2ee-0539924d4f42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\hashutil">
+      <UniqueIdentifier>{36038a4c-a879-475d-b2ad-b7e5ad7ddeef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\memdbg">
+      <UniqueIdentifier>{9ece7744-ccee-495a-bebf-2759e11c87bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\mono">
+      <UniqueIdentifier>{4eb4df81-ee7c-4afe-8827-8e28bde603f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\ntinspect">
+      <UniqueIdentifier>{53290e72-3c67-40e7-ac17-8d797f3c1941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\winversion">
+      <UniqueIdentifier>{b70c7c03-4f3c-4bd6-bcfe-5f93b9227696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\winversion">
+      <UniqueIdentifier>{7ec419f7-8042-4fb4-b3c5-8da4a62b58dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\memdbg">
+      <UniqueIdentifier>{88784d98-ac2e-49f8-b28f-8abb9be79a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\ntinspect">
+      <UniqueIdentifier>{56efefa0-21ce-4c60-a425-00141469b117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\disasm">
+      <UniqueIdentifier>{9d6897e6-4564-461d-a29c-9dd154205db7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\const.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\except.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\engine.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\hookdefs.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\match.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\pchooks.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\mono\types.h">
+      <Filter>Header Files\engine\mono</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\mono\funcinfo.h">
+      <Filter>Header Files\engine\mono</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\ppsspp\funcinfo.h">
+      <Filter>Header Files\engine\ppsspp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hijack\texthook.h">
+      <Filter>Header Files\hijack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tree\avl.h">
+      <Filter>Header Files\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\growl.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\util.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\winmaker\winmaker.h">
+      <Filter>Header Files\shared\winmaker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\winmutex\winmutex.h">
+      <Filter>Header Files\shared\winmutex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\sakurakit\skdebug.h">
+      <Filter>Header Files\shared\sakurakit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\unload.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\util.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\windbg.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\windbg_p.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\hijack.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\windbg\inject.h">
+      <Filter>Header Files\shared\windbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\winseh\winseh.h">
+      <Filter>Header Files\shared\winseh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ccutil\ccmacro.h">
+      <Filter>Header Files\shared\ccutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cppstring.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cpptype.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cppunicode.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cppcstring.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cpplocale.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cppmarshal.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cppmath.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\cpputil\cpppath.h">
+      <Filter>Header Files\shared\cpputil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hashutil\hashutil.h">
+      <Filter>Header Files\shared\hashutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\hashutil\hashstr.h">
+      <Filter>Header Files\shared\hashutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\memdbg\memsearch.h">
+      <Filter>Header Files\shared\memdbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\memdbg\memdbg.h">
+      <Filter>Header Files\shared\memdbg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\mono\monoobject.h">
+      <Filter>Header Files\shared\mono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\mono\monotype.h">
+      <Filter>Header Files\shared\mono</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ntinspect\ntinspect.h">
+      <Filter>Header Files\shared\ntinspect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\winversion\winversion.h">
+      <Filter>Header Files\shared\winversion</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VNRHook.cpp">
+      <Filter>Exclude Flies</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Exclude Flies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pipe.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\engine.cc">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\match.cc">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\pchooks.cc">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hijack\texthook.cc">
+      <Filter>Source Files\hijack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\util.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\winmaker\winmaker.cc">
+      <Filter>Source Files\shared\winmaker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\windbg\hijack.cc">
+      <Filter>Source Files\shared\windbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\windbg\inject.cc">
+      <Filter>Source Files\shared\windbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\windbg\unload.cc">
+      <Filter>Source Files\shared\windbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\winseh\winseh.cc">
+      <Filter>Source Files\shared\winseh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\winseh\winseh_safe.cc">
+      <Filter>Source Files\shared\winseh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\winversion\winversion.cc">
+      <Filter>Source Files\shared\winversion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\memdbg\memsearch.cc">
+      <Filter>Source Files\shared\memdbg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\ntinspect\ntinspect.cc">
+      <Filter>Source Files\shared\ntinspect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\disasm\disasm.cc">
+      <Filter>Source Files\shared\disasm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\Shared\winseh\safeseh.asm">
+      <Filter>Source Files\shared\winseh</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

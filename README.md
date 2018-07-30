@@ -17,16 +17,14 @@ Releases of *ITHVNR* can be found [here](https://github.com/mireado/ITHVNR/relea
 Basically, ITHVNR base on [Stomp](http://www.hongfire.com/forum/showthread.php/438331-ITHVNR-ITH-with-the-VNR-engine)'s version.
 
 ## Activity Graph
-
-[![Throughput Graph](https://graphs.waffle.io/mireado/ITHVNR/throughput.svg)](https://waffle.io/mireado/ITHVNR/metrics/throughput)
+[![Throughput Graph](https://graphs.waffle.io/sokcuri/ITHVNR/throughput.svg)](https://graphs.waffle.io/sokcuri/ITHVNR/throughput.svg)
 
 ## Features
-
 - Open-source
 - Hook text
 
 ## License
-
+GPL v3
 
 ## Developers
 
@@ -35,6 +33,7 @@ Basically, ITHVNR base on [Stomp](http://www.hongfire.com/forum/showthread.php/4
 - VNR engine making by [jichi](http://sakuradite.com/topic)
 - ITH updating by [Andys](http://www.hongfire.com/forum/member/126633-andys)
 - ITHVNR new GUI & VNR engine migration by [Stomp](http://www.hongfire.com/forum/member/325894-stomp)
+- ITHVNR maintenance by [mireado](https://github.com/mireado)
 
 ## Special Thanks
 
