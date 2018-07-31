@@ -1,7 +1,7 @@
 // winseh.cc
 // 12/13/2013 jichi
 
-#include "shared/winseh/winseh.h"
+#include "src/winseh/winseh.h"
 #include "shared/ntdll/ntdll.h"
 //#include <cstdio>
 

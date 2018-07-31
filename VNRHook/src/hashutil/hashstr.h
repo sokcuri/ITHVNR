@@ -5,7 +5,7 @@
 // 8/1/2011
 // See: http://www.cse.yorku.ca/~oz/hash.html
 
-#include "shared/hashutil/hashutil.h"
+#include "src/hashutil/hashutil.h"
 #include <cstdint>
 
 HASHUTIL_BEGIN_NAMESPACE

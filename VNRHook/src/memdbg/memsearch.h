@@ -4,7 +4,7 @@
 // memsearch.h
 // 4/20/2014 jichi
 
-#include "shared/memdbg/memdbg.h"
+#include "src/memdbg/memdbg.h"
 #ifndef MEMDBG_NO_STL
 # include <functional>
 #endif // MEMDBG_NO_STL

@@ -1,7 +1,7 @@
 // winversion.cc
 // 9/5/2014 jichi
 
-#include "shared/winversion/winversion.h"
+#include "src/winversion/winversion.h"
 #include <windows.h>
 
 // http://stackoverflow.com/questions/940707/how-do-i-programatically-get-the-version-of-a-dll-or-exe-file

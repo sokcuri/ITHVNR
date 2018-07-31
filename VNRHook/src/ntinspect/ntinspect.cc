@@ -1,7 +1,7 @@
 // ntinspect.cc
 // 4/20/2014 jichi
 #include "shared/ntdll/ntdll.h"
-#include "shared/ntinspect/ntinspect.h"
+#include "src/ntinspect/ntinspect.h"
 
 // https://social.msdn.microsoft.com/Forums/vstudio/en-US/4cb11cd3-8ce0-49d7-9dda-d62e9ae0180b/how-to-get-current-module-handle?forum=vcgeneral
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;

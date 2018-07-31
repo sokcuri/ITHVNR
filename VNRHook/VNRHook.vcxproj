@@ -20,20 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Shared\ccutil\ccmacro.h" />
-    <ClInclude Include="..\Shared\cpputil\cppcstring.h" />
-    <ClInclude Include="..\Shared\cpputil\cpplocale.h" />
-    <ClInclude Include="..\Shared\cpputil\cppmarshal.h" />
-    <ClInclude Include="..\Shared\cpputil\cppmath.h" />
-    <ClInclude Include="..\Shared\cpputil\cpppath.h" />
-    <ClInclude Include="..\Shared\cpputil\cppstring.h" />
-    <ClInclude Include="..\Shared\cpputil\cpptype.h" />
-    <ClInclude Include="..\Shared\cpputil\cppunicode.h" />
-    <ClInclude Include="..\Shared\hashutil\hashstr.h" />
-    <ClInclude Include="..\Shared\hashutil\hashutil.h" />
-    <ClInclude Include="..\Shared\memdbg\memdbg.h" />
-    <ClInclude Include="..\Shared\memdbg\memsearch.h" />
-    <ClInclude Include="..\Shared\mono\monoobject.h" />
-    <ClInclude Include="..\Shared\mono\monotype.h" />
     <ClInclude Include="..\Shared\ntinspect\ntinspect.h" />
     <ClInclude Include="..\Shared\sakurakit\skdebug.h" />
     <ClInclude Include="..\Shared\windbg\hijack.h" />
@@ -44,11 +30,10 @@
     <ClInclude Include="..\Shared\windbg\windbg_p.h" />
     <ClInclude Include="..\Shared\winmaker\winmaker.h" />
     <ClInclude Include="..\Shared\winmutex\winmutex.h" />
-    <ClInclude Include="..\Shared\winseh\winseh.h" />
-    <ClInclude Include="..\Shared\winversion\winversion.h" />
     <ClInclude Include="include\const.h" />
     <ClInclude Include="include\defs.h" />
     <ClInclude Include="include\types.h" />
+    <ClInclude Include="src\disasm\disasm.h" />
     <ClInclude Include="src\engine\engine.h" />
     <ClInclude Include="src\engine\hookdefs.h" />
     <ClInclude Include="src\engine\match.h" />
@@ -59,28 +44,33 @@
     <ClInclude Include="src\except.h" />
     <ClInclude Include="src\hijack\texthook.h" />
     <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\memdbg\memdbg.h" />
+    <ClInclude Include="src\memdbg\memsearch.h" />
+    <ClInclude Include="src\ntinspect\ntinspect.h" />
     <ClInclude Include="src\tree\avl.h" />
     <ClInclude Include="src\util\growl.h" />
     <ClInclude Include="src\util\util.h" />
+    <ClInclude Include="src\winseh\winseh.h" />
+    <ClInclude Include="src\winversion\winversion.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Shared\disasm\disasm.cc" />
-    <ClCompile Include="..\Shared\memdbg\memsearch.cc" />
-    <ClCompile Include="..\Shared\ntinspect\ntinspect.cc" />
     <ClCompile Include="..\Shared\windbg\hijack.cc" />
     <ClCompile Include="..\Shared\windbg\inject.cc" />
     <ClCompile Include="..\Shared\windbg\unload.cc" />
     <ClCompile Include="..\Shared\winmaker\winmaker.cc" />
-    <ClCompile Include="..\Shared\winseh\winseh.cc" />
-    <ClCompile Include="..\Shared\winseh\winseh_safe.cc" />
-    <ClCompile Include="..\Shared\winversion\winversion.cc" />
+    <ClCompile Include="src\disasm\disasm.cc" />
     <ClCompile Include="src\engine\engine.cc" />
     <ClCompile Include="src\engine\match.cc" />
     <ClCompile Include="src\engine\pchooks.cc" />
     <ClCompile Include="src\hijack\texthook.cc" />
     <ClCompile Include="src\main.cc" />
+    <ClCompile Include="src\memdbg\memsearch.cc" />
+    <ClCompile Include="src\ntinspect\ntinspect.cc" />
     <ClCompile Include="src\pipe.cc" />
     <ClCompile Include="src\util\util.cc" />
+    <ClCompile Include="src\winseh\winseh.cc" />
+    <ClCompile Include="src\winseh\winseh_safe.cc" />
+    <ClCompile Include="src\winversion\winversion.cc" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -89,9 +79,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\Shared\winseh\safeseh.asm">
-      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</UseSafeExceptionHandlers>
+    <MASM Include="src\winseh\safeseh.asm">
       <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</UseSafeExceptionHandlers>
+      <UseSafeExceptionHandlers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</UseSafeExceptionHandlers>
     </MASM>
   </ItemGroup>
   <PropertyGroup Label="Globals">

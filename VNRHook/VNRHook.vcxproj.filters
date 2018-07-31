@@ -37,29 +37,11 @@
     <Filter Include="Header Files\shared\sakurakit">
       <UniqueIdentifier>{b23a3ff7-eead-444e-bddf-ea71c7ae250d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\shared\winseh">
-      <UniqueIdentifier>{e3aa8ac4-8fd6-4907-8cd8-015120b131fc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\shared\ccutil">
       <UniqueIdentifier>{b65f13dc-65e9-4a02-9f78-aa935887657a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\shared\cpputil">
-      <UniqueIdentifier>{62450d6e-7534-438e-b169-69f48778e141}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\shared\hashutil">
-      <UniqueIdentifier>{79bcdb4f-eeb3-431c-8d57-2d31ff6b5f6c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\shared\memdbg">
-      <UniqueIdentifier>{3e7f2e6c-2ae9-460e-b805-0473b32a304e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\shared\mono">
-      <UniqueIdentifier>{e9797e68-6f3e-4aca-8bf2-e9da2e45c2bf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\shared\ntinspect">
       <UniqueIdentifier>{3cc730b5-2ed5-4599-9441-2a8676461a0d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\shared\winversion">
-      <UniqueIdentifier>{9ea7761e-299c-41e4-801e-f7817834c7f8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{d3ac0c99-7697-45ac-868d-7732f5eaefe3}</UniqueIdentifier>
@@ -82,20 +64,32 @@
     <Filter Include="Source Files\shared\windbg">
       <UniqueIdentifier>{afe75aca-9e07-46bf-90ef-e77ff0494730}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared\winseh">
-      <UniqueIdentifier>{68d20d83-6c9d-40e4-b300-78e0df24b570}</UniqueIdentifier>
+    <Filter Include="Source Files\disasm">
+      <UniqueIdentifier>{8145d676-a7af-47b2-bc92-afe739ef415c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared\winversion">
-      <UniqueIdentifier>{f0671240-cb36-49e5-98d4-01468e6da240}</UniqueIdentifier>
+    <Filter Include="Source Files\memdbg">
+      <UniqueIdentifier>{582989d9-6a42-4793-a230-ca0bbcfc2230}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared\memdbg">
-      <UniqueIdentifier>{0febdb08-7a07-424f-a8ca-89427df98747}</UniqueIdentifier>
+    <Filter Include="Source Files\ntinspect">
+      <UniqueIdentifier>{5142a5d0-0efb-4f12-8857-f33dcdea4702}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared\ntinspect">
-      <UniqueIdentifier>{238259b3-115d-48d0-bb1c-02187bcbe657}</UniqueIdentifier>
+    <Filter Include="Source Files\winseh">
+      <UniqueIdentifier>{57422fc3-96ea-400a-a162-dfadeceff131}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\shared\disasm">
-      <UniqueIdentifier>{ff10e83d-5ca0-416e-89b3-e4cc36690b5c}</UniqueIdentifier>
+    <Filter Include="Source Files\winversion">
+      <UniqueIdentifier>{9276eada-9c6a-4bb0-aaec-18f378f05448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\disasm">
+      <UniqueIdentifier>{bbb75536-a95c-442e-9a65-7aa5d51d446a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\memdbg">
+      <UniqueIdentifier>{a91195f0-5f6a-4272-9e25-295cbd9dfe7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\winseh">
+      <UniqueIdentifier>{b38286e1-1adc-40c3-9bde-ab9af1ecfeb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\winversion">
+      <UniqueIdentifier>{36c901ae-0448-41ae-b874-ba50392aec01}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -174,59 +168,29 @@
     <ClInclude Include="..\Shared\sakurakit\skdebug.h">
       <Filter>Header Files\shared\sakurakit</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\winseh\winseh.h">
-      <Filter>Header Files\shared\winseh</Filter>
-    </ClInclude>
     <ClInclude Include="..\Shared\ccutil\ccmacro.h">
       <Filter>Header Files\shared\ccutil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppcstring.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cpplocale.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppmarshal.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppmath.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cpppath.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppstring.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cpptype.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\cpputil\cppunicode.h">
-      <Filter>Header Files\shared\cpputil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\hashutil\hashstr.h">
-      <Filter>Header Files\shared\hashutil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\hashutil\hashutil.h">
-      <Filter>Header Files\shared\hashutil</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\memdbg\memdbg.h">
-      <Filter>Header Files\shared\memdbg</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\memdbg\memsearch.h">
-      <Filter>Header Files\shared\memdbg</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\mono\monoobject.h">
-      <Filter>Header Files\shared\mono</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Shared\mono\monotype.h">
-      <Filter>Header Files\shared\mono</Filter>
     </ClInclude>
     <ClInclude Include="..\Shared\ntinspect\ntinspect.h">
       <Filter>Header Files\shared\ntinspect</Filter>
     </ClInclude>
-    <ClInclude Include="..\Shared\winversion\winversion.h">
-      <Filter>Header Files\shared\winversion</Filter>
+    <ClInclude Include="src\ntinspect\ntinspect.h">
+      <Filter>Source Files\ntinspect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\disasm\disasm.h">
+      <Filter>Header Files\disasm</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memdbg\memdbg.h">
+      <Filter>Header Files\memdbg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memdbg\memsearch.h">
+      <Filter>Header Files\memdbg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\winseh\winseh.h">
+      <Filter>Header Files\winseh</Filter>
+    </ClInclude>
+    <ClInclude Include="src\winversion\winversion.h">
+      <Filter>Header Files\winversion</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -242,28 +206,10 @@
     <ClCompile Include="..\Shared\windbg\unload.cc">
       <Filter>Source Files\shared\windbg</Filter>
     </ClCompile>
-    <ClCompile Include="..\Shared\winversion\winversion.cc">
-      <Filter>Source Files\shared\winversion</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Shared\memdbg\memsearch.cc">
-      <Filter>Source Files\shared\memdbg</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Shared\ntinspect\ntinspect.cc">
-      <Filter>Source Files\shared\ntinspect</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Shared\disasm\disasm.cc">
-      <Filter>Source Files\shared\disasm</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cc" />
     <ClCompile Include="src\pipe.cc" />
     <ClCompile Include="src\util\util.cc" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="..\Shared\winseh\winseh_safe.cc">
-      <Filter>Source Files\shared\winseh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Shared\winseh\winseh.cc">
-      <Filter>Source Files\shared\winseh</Filter>
-    </ClCompile>
     <ClCompile Include="src\engine\engine.cc">
       <Filter>Source Files\engine</Filter>
     </ClCompile>
@@ -276,10 +222,28 @@
     <ClCompile Include="src\hijack\texthook.cc">
       <Filter>Source Files\hijack</Filter>
     </ClCompile>
+    <ClCompile Include="src\disasm\disasm.cc">
+      <Filter>Source Files\disasm</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memdbg\memsearch.cc">
+      <Filter>Source Files\memdbg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\winversion\winversion.cc">
+      <Filter>Source Files\winversion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\winseh\winseh.cc">
+      <Filter>Source Files\winseh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\winseh\winseh_safe.cc">
+      <Filter>Source Files\winseh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ntinspect\ntinspect.cc">
+      <Filter>Source Files\ntinspect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="..\Shared\winseh\safeseh.asm">
-      <Filter>Source Files\shared\winseh</Filter>
+    <MASM Include="src\winseh\safeseh.asm">
+      <Filter>Source Files\winseh</Filter>
     </MASM>
   </ItemGroup>
 </Project>

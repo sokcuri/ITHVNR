@@ -15,8 +15,8 @@
 #include "src/main.h"
 #include "include/const.h"
 #include "shared/ithsys/ithsys.h"
-#include "shared/winkey/winkey.h"
-#include "shared/disasm/disasm.h"
+#include "src/winkey/winkey.h"
+#include "src/disasm/disasm.h"
 //#include "winseh/winseh.h"
 
 //#define ConsoleOutput(...)   (void)0    // jichi 9/17/2013: I don't need this ><
