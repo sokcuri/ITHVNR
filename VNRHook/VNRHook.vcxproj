@@ -51,7 +51,6 @@
     <ClInclude Include="src\util\growl.h" />
     <ClInclude Include="src\util\util.h" />
     <ClInclude Include="src\winseh\winseh.h" />
-    <ClInclude Include="src\winversion\winversion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Shared\windbg\hijack.cc" />
@@ -70,7 +69,6 @@
     <ClCompile Include="src\util\util.cc" />
     <ClCompile Include="src\winseh\winseh.cc" />
     <ClCompile Include="src\winseh\winseh_safe.cc" />
-    <ClCompile Include="src\winversion\winversion.cc" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

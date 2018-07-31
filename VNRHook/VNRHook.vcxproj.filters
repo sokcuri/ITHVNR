@@ -76,9 +76,6 @@
     <Filter Include="Source Files\winseh">
       <UniqueIdentifier>{57422fc3-96ea-400a-a162-dfadeceff131}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\winversion">
-      <UniqueIdentifier>{9276eada-9c6a-4bb0-aaec-18f378f05448}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\disasm">
       <UniqueIdentifier>{bbb75536-a95c-442e-9a65-7aa5d51d446a}</UniqueIdentifier>
     </Filter>
@@ -87,9 +84,6 @@
     </Filter>
     <Filter Include="Header Files\winseh">
       <UniqueIdentifier>{b38286e1-1adc-40c3-9bde-ab9af1ecfeb8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\winversion">
-      <UniqueIdentifier>{36c901ae-0448-41ae-b874-ba50392aec01}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -189,9 +183,6 @@
     <ClInclude Include="src\winseh\winseh.h">
       <Filter>Header Files\winseh</Filter>
     </ClInclude>
-    <ClInclude Include="src\winversion\winversion.h">
-      <Filter>Header Files\winversion</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Shared\winmaker\winmaker.cc">
@@ -227,9 +218,6 @@
     </ClCompile>
     <ClCompile Include="src\memdbg\memsearch.cc">
       <Filter>Source Files\memdbg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\winversion\winversion.cc">
-      <Filter>Source Files\winversion</Filter>
     </ClCompile>
     <ClCompile Include="src\winseh\winseh.cc">
       <Filter>Source Files\winseh</Filter>

@@ -19,7 +19,7 @@
 #include "src/memdbg/memsearch.h"
 #include "src/ntinspect/ntinspect.h"
 #include "src/disasm/disasm.h"
-#include "src/winversion/winversion.h"
+//#include "src/winversion/winversion.h"
 #include "src/hashutil/hashstr.h"
 #include "src/cpputil/cppcstring.h"
 #include "shared/ccutil/ccmacro.h"
@@ -16633,8 +16633,25 @@ bool InsertPPSSPPHooks()
 
   ConsoleOutput("vnreng: PPSSPP: enter");
 
-  if (!WinVersion::queryFileVersion(process_path_, PPSSPP_VERSION))
-    ConsoleOutput("vnreng: failed to get PPSSPP version");
+  // http://stackoverflow.com/questions/940707/how-do-i-programatically-get-the-version-of-a-dll-or-exe-file
+  // get the version info for the file requested
+  if (DWORD dwSize = ::GetFileVersionInfoSizeW(process_path_, nullptr)) {
+	UINT len = 0;
+	BYTE *buf = new BYTE[dwSize];
+	VS_FIXEDFILEINFO *info = nullptr;
+	if(::GetFileVersionInfoW(process_path_, 0, dwSize, buf)
+		&& ::VerQueryValueW(buf, L"\\", (LPVOID*)&info, &len)
+		&& info) {
+	  PPSSPP_VERSION[0] = HIWORD(info->dwFileVersionMS),
+	  PPSSPP_VERSION[1] = LOWORD(info->dwFileVersionMS),
+	  PPSSPP_VERSION[2] = HIWORD(info->dwFileVersionLS),
+	  PPSSPP_VERSION[3] = LOWORD(info->dwFileVersionLS);
+	}
+	else {
+	  ConsoleOutput("vnreng: failed to get PPSSPP version");
+	}
+	delete[] buf;
+  }
 
   InsertPPSSPPHLEHooks();
 

@@ -875,6 +875,7 @@ BOOL IthInitSystemService()
     while(*++t);
     if (*(t-1)!=L'\\')
       *t++=L'\\';
+	OutputDebugString(file_path);
     ::wcscpy(t,L"C_932.nls");
     RtlInitUnicodeString(&us, ::file_path);
     if (!NT_SUCCESS(NtOpenFile(&codepage_file, FILE_READ_DATA, &oa, &ios,FILE_SHARE_READ,0)))
