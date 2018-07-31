@@ -129,7 +129,7 @@ void CreateNewPipe()
   }
 
   hThread = IthCreateThread(RecvThread, (DWORD)hTextPipe);
-  man->RegisterPipe(hTextPipe, hCmdPipe, hThread);
+  hook_man->RegisterPipe(hTextPipe, hCmdPipe, hThread);
 }
 
 void DetachFromProcess(DWORD pid)
@@ -138,13 +138,13 @@ void DetachFromProcess(DWORD pid)
          hEvent = INVALID_HANDLE_VALUE;
   //try {
   IO_STATUS_BLOCK ios;
-  ProcessRecord *pr = man->GetProcessRecord(pid);
+  ProcessRecord *pr = hook_man->GetProcessRecord(pid);
   if (!pr)
     return;
   //IthBreak();
   hEvent = IthCreateEvent(nullptr);
   if (STATUS_PENDING == NtFsControlFile(
-      man->GetCmdHandleByPID(pid),
+      hook_man->GetCmdHandleByPID(pid),
       hEvent,
       0,0,
       &ios,
@@ -224,7 +224,7 @@ DWORD WINAPI RecvThread(LPVOID lpThreadParameter)
         module = *(DWORD *)(buff + 0x8),
         hookman = *(DWORD *)(buff + 0x4);
         //engine = *(DWORD *)(buff + 0xc);
-  man->RegisterProcess(pid, hookman, module);
+  hook_man->RegisterProcess(pid, hookman, module);
 
   // jichi 9/27/2013: why recursion?
   CreateNewPipe();
@@ -261,7 +261,7 @@ DWORD WINAPI RecvThread(LPVOID lpThreadParameter)
         {
           static long lock;
           while (InterlockedExchange(&lock, 1) == 1);
-          ProcessEventCallback new_hook = man->ProcessNewHook();
+          ProcessEventCallback new_hook = hook_man->ProcessNewHook();
           if (new_hook)
             new_hook(pid);
           lock = 0;
@@ -287,7 +287,7 @@ DWORD WINAPI RecvThread(LPVOID lpThreadParameter)
       if (len >> 31) // jichi 10/27/2013: len is too large, which seldom happens
         len = 0;
       //man->DispatchText(pid, len ? data : nullptr, hook, retn, split, len, space);
-      man->DispatchText(pid, data, hook, retn, split, len, space);
+      hook_man->DispatchText(pid, data, hook, retn, split, len, space);
     }
   }
 
@@ -306,7 +306,7 @@ DWORD WINAPI RecvThread(LPVOID lpThreadParameter)
 
   NtClose(hDisconnect);
   DetachFromProcess(pid);
-  man->UnRegisterProcess(pid);
+  hook_man->UnRegisterProcess(pid);
 
   //NtClearEvent(hDetachEvent);
 

@@ -18,7 +18,7 @@ GLOBAL BOOL running;
 //GLOBAL BitMap *pid_map;
 //GLOBAL CustomFilterMultiByte *mb_filter;
 //GLOBAL CustomFilterUnicode *uni_filter;
-GLOBAL HookManager *man;
+GLOBAL HookManager *hook_man;
 //GLOBAL CommandQueue *cmdq;
 GLOBAL SettingManager *setman;
 GLOBAL WCHAR recv_pipe[];

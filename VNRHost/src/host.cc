@@ -47,7 +47,7 @@ HANDLE hHookMutex;  // jichi 9/28/2013: used to guard hook modification
 extern CRITICAL_SECTION detach_cs;
 
 Settings *settings;
-HWND hMainWnd;
+HWND hHostWnd;
 HANDLE hPipeExist;
 BOOL running;
 
@@ -236,26 +236,8 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
   switch (fdwReason)
   {
   case DLL_PROCESS_ATTACH:
-    LdrDisableThreadCalloutsForDll(hinstDLL);
-    InitializeCriticalSection(&::cs);
-    IthInitSystemService();
-    GetDebugPriv();
-    // jichi 12/20/2013: Since I already have a GUI, I don't have to InitCommonControls()
-    //Used by timers.
-    InitCommonControls();
-    // jichi 8/24/2013: Create hidden window so that ITH can access timer and events
-    hMainWnd = CreateWindowW(L"Button", L"InternalWindow", 0, 0, 0, 0, 0, 0, 0, hinstDLL, 0);
-    //wm_register_hidden_class("vnrsrv.class");
-    //hMainWnd = (HWND)wm_create_hidden_window("vnrsrv", "Button", hinstDLL);
-    //ChangeCurrentDirectory();
     break;
   case DLL_PROCESS_DETACH:
-    if (::running)
-      Host_Close();
-    DeleteCriticalSection(&::cs);
-    IthCloseSystemService();
-    //wm_destroy_window(hMainWnd);
-	DestroyWindow(hMainWnd);
     break;
   default:
     break;
@@ -288,13 +270,33 @@ struct InsertHookStruct
 
 IHFSERVICE void IHFAPI Host_Init()
 {
-  InitializeCriticalSection(&::cs);
-  GetDebugPriv();
+	HINSTANCE hinstDLL = GetModuleHandle(NULL);
+	LdrDisableThreadCalloutsForDll(hinstDLL);
+	InitializeCriticalSection(&::cs);
+	IthInitSystemService();
+	GetDebugPriv();
+	// jichi 12/20/2013: Since I already have a GUI, I don't have to InitCommonControls()
+	//Used by timers.
+	InitCommonControls();
+	// jichi 8/24/2013: Create hidden window so that ITH can access timer and events
+	hHostWnd = CreateWindowW(L"Button", L"InternalWindow", 0, 0, 0, 0, 0, 0, 0, hinstDLL, 0);
+	//wm_register_hidden_class("vnrsrv.class");
+	//hMainWnd = (HWND)wm_create_hidden_window("vnrsrv", "Button", hinstDLL);
+	//ChangeCurrentDirectory();
+  //InitializeCriticalSection(&::cs);
+  //GetDebugPriv();
 }
 
 IHFSERVICE void IHFAPI Host_Destroy()
 {
-  InitializeCriticalSection(&::cs);
+	if (::running)
+		Host_Close();
+	DeleteCriticalSection(&::cs);
+	IthCloseSystemService();
+	//wm_destroy_window(hMainWnd);
+	DestroyWindow(hHostWnd);
+
+  //InitializeCriticalSection(&::cs);
 }
 
 IHFSERVICE BOOL IHFAPI Host_Open()
@@ -310,7 +312,7 @@ IHFSERVICE BOOL IHFAPI Host_Open()
   else if (!::running) {
     ::running = true;
     ::settings = new Settings;
-    ::man = new HookManager;
+    ::hook_man = new HookManager;
     //cmdq = new CommandQueue;
     InitializeCriticalSection(&detach_cs);
 
@@ -340,7 +342,7 @@ IHFSERVICE DWORD IHFAPI Host_Close()
     NtClose(hRecvPipe);
     NtClearEvent(::hPipeExist);
     //delete cmdq;
-    delete man;
+    delete hook_man;
     delete settings;
     NtClose(::hHookMutex);
     NtClose(hServerMutex);
@@ -400,7 +402,7 @@ IHFSERVICE bool IHFAPI Host_InjectByPID(DWORD pid)
     DOUT("refuse to inject myself");
     return false;
   }
-  if (man->GetProcessRecord(pid)) {
+  if (hook_man->GetProcessRecord(pid)) {
     //ConsoleOutput(AlreadyAttach);
     DOUT("already attached");
     return false;
@@ -472,8 +474,8 @@ IHFSERVICE bool IHFAPI Host_ActiveDetachProcess(DWORD pid)
   ITH_SYNC_HOOK;
 
   //man->LockHookman();
-  ProcessRecord *pr = man->GetProcessRecord(pid);
-  HANDLE hCmd = man->GetCmdHandleByPID(pid);
+  ProcessRecord *pr = hook_man->GetProcessRecord(pid);
+  HANDLE hCmd = hook_man->GetCmdHandleByPID(pid);
   if (pr == 0 || hCmd == 0)
     return false;
   HANDLE hProc;
@@ -526,7 +528,7 @@ IHFSERVICE bool IHFAPI Host_ActiveDetachProcess(DWORD pid)
 IHFSERVICE DWORD IHFAPI Host_GetHookManager(HookManager** hookman)
 {
   if (::running) {
-    *hookman = man;
+    *hookman = hook_man;
     return 0;
   }
   else
@@ -546,7 +548,7 @@ IHFSERVICE bool IHFAPI Host_GetSettings(Settings **p)
 IHFSERVICE bool IHFAPI Host_HijackProcess(DWORD pid)
 {
   //ITH_SYNC_HOOK;
-  HANDLE hCmd = man->GetCmdHandleByPID(pid);
+  HANDLE hCmd = hook_man->GetCmdHandleByPID(pid);
   return hCmd && sendCommand(hCmd, HOST_COMMAND_HIJACK_PROCESS);
 }
 
@@ -554,7 +556,7 @@ IHFSERVICE DWORD IHFAPI Host_InsertHook(DWORD pid, HookParam *hp, LPCSTR name)
 {
   ITH_SYNC_HOOK;
 
-  HANDLE hCmd = man->GetCmdHandleByPID(pid);
+  HANDLE hCmd = hook_man->GetCmdHandleByPID(pid);
   if (hCmd == 0)
     return -1;
 
@@ -596,7 +598,7 @@ IHFSERVICE DWORD IHFAPI Host_ModifyHook(DWORD pid, HookParam *hp)
     //const LONGLONG timeout = HOOK_TIMEOUT;
     NtWaitForSingleObject(hModify, 0, nullptr);
   NtClose(hModify);
-  man->RemoveSingleHook(pid, sp.hp.address);
+  hook_man->RemoveSingleHook(pid, sp.hp.address);
   return 0;
 }
 
@@ -620,26 +622,26 @@ IHFSERVICE DWORD IHFAPI Host_RemoveHook(DWORD pid, DWORD addr)
   //NtWaitForSingleObject(hRemoved, 0, (PLARGE_INTEGER)&timeout);
   NtWaitForSingleObject(hRemoved, 0, nullptr);
   NtClose(hRemoved);
-  man -> RemoveSingleHook(pid, sp.hp.address);
+  hook_man -> RemoveSingleHook(pid, sp.hp.address);
   return 0;
 }
 
 // 4/30/2015: Removed as not needed. Going to change to json
 IHFSERVICE DWORD IHFAPI Host_AddLink(DWORD from, DWORD to)
 {
-  man->AddLink(from & 0xffff, to & 0xffff);
+  hook_man->AddLink(from & 0xffff, to & 0xffff);
   return 0;
 }
 
 IHFSERVICE DWORD IHFAPI Host_UnLink(DWORD from)
 {
-  man->UnLink(from & 0xffff);
+  hook_man->UnLink(from & 0xffff);
   return 0;
 }
 
 IHFSERVICE DWORD IHFAPI Host_UnLinkAll(DWORD from)
 {
-  man->UnLinkAll(from & 0xffff);
+  hook_man->UnLinkAll(from & 0xffff);
   return 0;
 }
 

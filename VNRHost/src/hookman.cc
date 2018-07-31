@@ -78,7 +78,7 @@ bool GetProcessPath(DWORD pid, __out LPWSTR path)
 
 } // unnamed namespace
 
-HookManager *man; // jichi 9/22/2013: initialized in main
+HookManager *hook_man; // jichi 9/22/2013: initialized in main
 //BitMap* pid_map;
 DWORD clipboard_flag,
       split_time,
@@ -104,7 +104,7 @@ DWORD GetHookName(LPSTR str, DWORD pid, DWORD hook_addr, DWORD max)
   //}
 
   //::man->LockProcessHookman(pid);
-  ProcessRecord *pr = ::man->GetProcessRecord(pid);
+  ProcessRecord *pr = ::hook_man->GetProcessRecord(pid);
   if (!pr)
     return 0;
   NtWaitForSingleObject(pr->hookman_mutex, 0, 0);
@@ -864,9 +864,9 @@ MK_BASIC_TYPE(LPVOID)
 //  return hash;
 //}
 
-DWORD  GetCurrentPID() { return ::man->GetCurrentPID(); }
+DWORD  GetCurrentPID() { return ::hook_man->GetCurrentPID(); }
 
-HANDLE  GetCmdHandleByPID(DWORD pid) { return ::man->GetCmdHandleByPID(pid); }
+HANDLE  GetCmdHandleByPID(DWORD pid) { return ::hook_man->GetCmdHandleByPID(pid); }
 
 //void AddLink(WORD from, WORD to) { ::man->AddLink(from, to); }
 
@@ -924,7 +924,7 @@ void GetCode(const HookParam &hp, LPWSTR buffer, DWORD pid)
     if (pid) {
       WCHAR path[MAX_PATH];
       MEMORY_BASIC_INFORMATION info;
-      ProcessRecord* pr = ::man->GetProcessRecord(pid);
+      ProcessRecord* pr = ::hook_man->GetProcessRecord(pid);
       if (pr) {
         HANDLE hProc = pr->process_handle;
         if (NT_SUCCESS(NtQueryVirtualMemory(hProc,(PVOID)hp.address, MemorySectionName, path, MAX_PATH*2, 0)) &&
