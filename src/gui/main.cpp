@@ -15,6 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "main.h"
 #include "ITH.h"
 #include "host/host.h"
 #include "host/hookman.h"
@@ -240,7 +241,7 @@ LONG WINAPI UnhandledExcept(_EXCEPTION_POINTERS *ExceptionInfo)
 	return 0;
 }
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+void ITH_Init()
 {
 	InitCommonControls();
 	if (!IthInitSystemService())
@@ -262,7 +263,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		InitializeSettings();
 		setman->splittingInterval = split_time;
 		setman->clipboardFlag = clipboard_flag > 0;
-		hIns = hInstance;
+		hIns = GetModuleHandle(nullptr);
 		MyRegisterClass(hIns);
 		InitInstance(hIns, FALSE, &window);
 		MSG msg;
@@ -281,8 +282,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		FindITH();
 	}
+}
+
+void ITH_CleanUp()
+{
 	Host_Close();
 	Host_Destroy();
-	IthCloseSystemService();
-	TerminateProcess(GetCurrentProcess(), 0);
+	//TerminateProcess(GetCurrentProcess(), 0);
+}
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+	ITH_Init();
+	ITH_CleanUp();
 }
