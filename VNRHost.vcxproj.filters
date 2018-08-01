@@ -36,6 +36,30 @@
     <Filter Include="Source Files\shared\windbg">
       <UniqueIdentifier>{5d72576e-6914-4758-bb96-71870e969553}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\shared\ithsys">
+      <UniqueIdentifier>{771a22af-e689-43ce-bafc-9b98c6411344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\ithsys">
+      <UniqueIdentifier>{7378b675-cd5c-4efe-a42c-771e3d616ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\shared\profile">
+      <UniqueIdentifier>{f42987cf-0e5f-4bbe-ae8a-9f0073073f38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\depends">
+      <UniqueIdentifier>{710a411f-f140-4585-997a-5112e87fafb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\depends\pugixml">
+      <UniqueIdentifier>{1d397125-a227-447c-928b-a6d6f1cc1185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\depends">
+      <UniqueIdentifier>{e6dcc960-9ac7-485c-8b8a-27f41844f53e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\depends\pugixml">
+      <UniqueIdentifier>{e69f9277-a26c-4b7f-8952-ad77af4a7587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\profile">
+      <UniqueIdentifier>{e37bdb32-8267-41c8-94a5-301ef0215701}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Shared\windbg\util.h">
@@ -89,6 +113,21 @@
     <ClInclude Include="include\host\config.h">
       <Filter>Header Files\shared</Filter>
     </ClInclude>
+    <ClInclude Include="include\ithsys\ithsys.h">
+      <Filter>Header Files\shared\ithsys</Filter>
+    </ClInclude>
+    <ClInclude Include="include\profile\Profile.h">
+      <Filter>Header Files\shared\profile</Filter>
+    </ClInclude>
+    <ClInclude Include="include\profile\misc.h">
+      <Filter>Header Files\shared\profile</Filter>
+    </ClInclude>
+    <ClInclude Include="depends\include\pugixml\pugiconfig.hpp">
+      <Filter>Header Files\depends\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="depends\include\pugixml\pugixml.hpp">
+      <Filter>Header Files\depends\pugixml</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VNRHost.cpp">
@@ -120,6 +159,18 @@
     </ClCompile>
     <ClCompile Include="src\windbg\hijack.cc">
       <Filter>Source Files\shared\windbg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ithsys\ithsys.cc">
+      <Filter>Source Files\shared\ithsys</Filter>
+    </ClCompile>
+    <ClCompile Include="depends\src\pugixml\pugixml.cpp">
+      <Filter>Source Files\depends\pugixml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\profile\misc.cpp">
+      <Filter>Source Files\shared\profile</Filter>
+    </ClCompile>
+    <ClCompile Include="src\profile\Profile.cpp">
+      <Filter>Source Files\shared\profile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

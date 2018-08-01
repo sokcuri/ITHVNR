@@ -93,12 +93,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>
       </SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;VNRHOST_EXPORTS;_WINDOWS;_USRDLL;ITH_HAS_SEH;_CRT_NON_CONFORMING_SWPRINTFS;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;UNICODE;_UNICODE;ITH_HAS_CRT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;VNRHOST_EXPORTS;_WINDOWS;_USRDLL;ITH_HAS_SEH;_CRT_NON_CONFORMING_SWPRINTFS;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;UNICODE;_UNICODE;ITH_HAS_CRT;PUGIXML_WCHAR_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/wd4819 /MP %(AdditionalOptions)</AdditionalOptions>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\host</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\host;$(ProjectDir)depends\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -134,11 +134,11 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>
       </SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;VNRHOST_EXPORTS;_WINDOWS;_USRDLL;ITH_HAS_SEH;_CRT_NON_CONFORMING_SWPRINTFS;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;UNICODE;_UNICODE;ITH_HAS_CRT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;VNRHOST_EXPORTS;_WINDOWS;_USRDLL;ITH_HAS_SEH;_CRT_NON_CONFORMING_SWPRINTFS;_SECURE_SCL=0;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;UNICODE;_UNICODE;ITH_HAS_CRT;PUGIXML_WCHAR_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalOptions>/wd4819 /MP /D PSAPI_VERSION=1 /D _SECURE_SCL=0 %(AdditionalOptions)</AdditionalOptions>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\host</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\host;$(ProjectDir)depends\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,6 +179,8 @@
     <ClInclude Include="..\Shared\windbg\windbg_p.h" />
     <ClInclude Include="..\Shared\winmaker\winmaker.h" />
     <ClInclude Include="..\Shared\winmutex\winmutex.h" />
+    <ClInclude Include="depends\include\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="depends\include\pugixml\pugixml.hpp" />
     <ClInclude Include="include\host\avl_p.h" />
     <ClInclude Include="include\host\config.h" />
     <ClInclude Include="include\host\hookman.h" />
@@ -187,8 +189,12 @@
     <ClInclude Include="include\host\settings.h" />
     <ClInclude Include="include\host\textthread.h" />
     <ClInclude Include="include\host\textthread_p.h" />
+    <ClInclude Include="include\ithsys\ithsys.h" />
+    <ClInclude Include="include\profile\misc.h" />
+    <ClInclude Include="include\profile\Profile.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="depends\src\pugixml\pugixml.cpp" />
     <ClCompile Include="dllmain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -197,6 +203,9 @@
     <ClCompile Include="src\host\host.cc" />
     <ClCompile Include="src\host\pipe.cc" />
     <ClCompile Include="src\host\textthread.cc" />
+    <ClCompile Include="src\ithsys\ithsys.cc" />
+    <ClCompile Include="src\profile\misc.cpp" />
+    <ClCompile Include="src\profile\Profile.cpp" />
     <ClCompile Include="src\windbg\hijack.cc" />
     <ClCompile Include="src\windbg\inject.cc" />
     <ClCompile Include="src\windbg\unload.cc" />

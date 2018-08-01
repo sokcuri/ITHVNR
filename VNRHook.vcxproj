@@ -43,6 +43,7 @@
     <ClInclude Include="include\engine\ppsspp\funcinfo.h" />
     <ClInclude Include="include\except.h" />
     <ClInclude Include="include\hijack\texthook.h" />
+    <ClInclude Include="include\ithsys\ithsys.h" />
     <ClInclude Include="include\main.h" />
     <ClInclude Include="include\memdbg\memdbg.h" />
     <ClInclude Include="include\memdbg\memsearch.h" />
@@ -63,6 +64,7 @@
     <ClCompile Include="src\hook\pipe.cc" />
     <ClCompile Include="src\hook\winseh\winseh.cc" />
     <ClCompile Include="src\hook\winseh\winseh_safe.cc" />
+    <ClCompile Include="src\ithsys\ithsys.cc" />
     <ClCompile Include="src\util\util.cc" />
     <ClCompile Include="src\windbg\hijack.cc" />
     <ClCompile Include="src\windbg\inject.cc" />
@@ -167,7 +169,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\hook</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\hook;$(ProjectDir)depends\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -176,9 +178,9 @@
       <OptimizeReferences>
       </OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;ntdll.lib;ithsys.lib;vnrprofile.lib;vnrhost.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;ntdll.lib;version.lib;vnrhost.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-      <AdditionalLibraryDirectories>$(SolutionDir)Build\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dist\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -198,15 +200,15 @@
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\hook</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)include\hook;$(ProjectDir)depends\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;;ntdll.lib;ithsys.lib;vnrprofile.lib;vnrhost.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ntdll.lib;version.lib;vnrhost.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
-      <AdditionalLibraryDirectories>$(SolutionDir)Build\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dist\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>

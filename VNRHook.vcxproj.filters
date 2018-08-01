@@ -82,6 +82,12 @@
     <Filter Include="Header Files\winseh">
       <UniqueIdentifier>{b38286e1-1adc-40c3-9bde-ab9af1ecfeb8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\shared\ithsys">
+      <UniqueIdentifier>{af4b7363-b88e-4f2a-b499-9e73d6081688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\shared\ithsys">
+      <UniqueIdentifier>{2be22b1e-436b-4d43-a46a-4689e4a892a9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Shared\ntinspect\ntinspect.h">
@@ -177,6 +183,9 @@
     <ClInclude Include="include\util\util.h">
       <Filter>Header Files\util</Filter>
     </ClInclude>
+    <ClInclude Include="include\ithsys\ithsys.h">
+      <Filter>Header Files\shared\ithsys</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\hook\main.cc">
@@ -226,6 +235,9 @@
     </ClCompile>
     <ClCompile Include="src\util\util.cc">
       <Filter>Source Files\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ithsys\ithsys.cc">
+      <Filter>Source Files\shared\ithsys</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

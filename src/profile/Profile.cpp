@@ -20,10 +20,10 @@
 #include "host/hookman.h"
 #include "hook/types.h"
 #include "hook/const.h"
-#include "Profile.h"
-#include "misc.h"
+#include "profile/Profile.h"
+#include "profile/misc.h"
 #include <algorithm>
-#include "pugixml.hpp"
+#include "pugixml/pugixml.hpp"
 
 extern HookManager* man;
 

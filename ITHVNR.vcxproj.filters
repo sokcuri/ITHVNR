@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\depends">
+      <UniqueIdentifier>{7ca7cc87-15ca-4105-9a10-e47e03997cd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\depends">
+      <UniqueIdentifier>{020d5c77-cd5b-4e2d-8888-23fef9957a38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\depends\pugixml">
+      <UniqueIdentifier>{e5f589cb-1978-4968-98ba-e18b76e92ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\depends\pugixml">
+      <UniqueIdentifier>{7cda8577-7a77-4268-9e5e-ffd0b9d1ff4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gui\language.cpp">
@@ -41,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="src\gui\CustomFilter.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="depends\src\pugixml\pugixml.cpp">
+      <Filter>Source Files\depends\pugixml</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +94,12 @@
     </ClInclude>
     <ClInclude Include="include\gui\resource.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="depends\include\pugixml\pugiconfig.hpp">
+      <Filter>Header Files\depends\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="depends\include\pugixml\pugixml.hpp">
+      <Filter>Header Files\depends\pugixml</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
