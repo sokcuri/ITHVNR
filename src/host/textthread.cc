@@ -700,7 +700,6 @@ void TextThread::CopyLastToClipboard()
 	else
 	{
 		buff2[MB_WC(buff, buff2)] = 0;
-		OutputDebugStringA(buff);
 	}
 	OutputDebugString(buff2);
 }

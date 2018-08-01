@@ -106,6 +106,17 @@ BOOL CALLBACK OptionDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		CheckDlgButton(hDlg, IDC_CHECK3, clipboard_flag);
 		CheckDlgButton(hDlg, IDC_CHECK4, cyclic_remove);
 		CheckDlgButton(hDlg, IDC_CHECK5, global_filter);
+		HWND h_active_wnd = GetForegroundWindow();
+		if (h_active_wnd != NULL) {
+			DWORD thread_id = GetWindowThreadProcessId(h_active_wnd, NULL);
+			DWORD current_thread_id = GetCurrentThreadId();
+			if (current_thread_id != thread_id) {
+				if (AttachThreadInput(current_thread_id, thread_id, TRUE)) {
+					BringWindowToTop(hDlg);
+					AttachThreadInput(current_thread_id, thread_id, FALSE);
+				}
+			}
+		}
 	}
 	return TRUE;
 	case WM_COMMAND:
@@ -162,6 +173,17 @@ BOOL CALLBACK ProcessDlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_INITDIALOG:
 	{
 		pswnd = new ProcessWindow(hDlg);
+		HWND h_active_wnd = GetForegroundWindow();
+		if (h_active_wnd != NULL) {
+			DWORD thread_id = GetWindowThreadProcessId(h_active_wnd, NULL);
+			DWORD current_thread_id = GetCurrentThreadId();
+			if (current_thread_id != thread_id) {
+				if (AttachThreadInput(current_thread_id, thread_id, TRUE)) {
+					BringWindowToTop(hDlg);
+					AttachThreadInput(current_thread_id, thread_id, FALSE);
+				}
+			}
+		}
 		return TRUE;
 	}
 	case WM_COMMAND:
