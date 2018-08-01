@@ -686,6 +686,23 @@ void TextThread::CopyLastToClipboard()
 {
   // jichi 8/25/2013: clipboard removed
   CopyToClipboard(storage+last_sentence,(status&USING_UNICODE)>0,used-last_sentence);
+
+	bool unicode = (status & USING_UNICODE);
+	char buff[1024];
+	wchar_t buff2[1024];
+	int len = used - last_sentence;
+	memcpy(buff, storage + last_sentence, len);
+	*(WORD*)(buff + len) = 0;
+	if (unicode)
+	{
+		memcpy(buff2, buff, len + 2);
+	}
+	else
+	{
+		buff2[MB_WC(buff, buff2)] = 0;
+		OutputDebugStringA(buff);
+	}
+	OutputDebugString(buff2);
 }
 
 //void TextThread::ResetEditText()

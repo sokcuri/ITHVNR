@@ -2,8 +2,8 @@
 #define IDC_STATIC (-1)
 #endif
 
-#define IDD_DIALOG2                             102
-#define IDD_DIALOG4                             104
+#define IDD_DIALOG2                             10102
+#define IDD_DIALOG4                             10104
 #define IDI_ICON1                               110
 #define IDC_CHECK1                              1000
 #define IDC_CHECK2                              1001

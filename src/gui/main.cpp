@@ -263,9 +263,9 @@ void ITH_Init()
 		InitializeSettings();
 		setman->splittingInterval = split_time;
 		setman->clipboardFlag = clipboard_flag > 0;
-		hIns = GetModuleHandle(nullptr);
+		hIns = GetModuleHandle(NULL);
 		MyRegisterClass(hIns);
-		InitInstance(hIns, FALSE, &window);
+		InitInstance(hIns, false, &window);
 		MSG msg;
 		while (GetMessage(&msg, NULL, 0, 0))
 		{

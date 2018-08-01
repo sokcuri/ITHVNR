@@ -733,8 +733,11 @@ void HookManager::DispatchText(DWORD pid, const BYTE *text, DWORD hook, DWORD re
       if (create)
         create(it);
     }
-    if (it)
-      it->AddText(text, len, false, space); // jichi 10/27/2013: new line is false
+	if (it)
+	{
+		it->AddText(text, len, false, space); // jichi 10/27/2013: new line is false
+		//OutputDebugString((wchar_t *)text);
+	}
     //LeaveCriticalSection(&hmcs);
     //ConsoleOutput("vnrhost:DispatchText: unlock");
   //} catch (...) {

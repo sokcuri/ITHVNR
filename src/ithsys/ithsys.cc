@@ -919,9 +919,7 @@ void IthCloseSystemService()
     NtUnmapViewOfSection(NtCurrentProcess(), ::page);
     NtClose(::codepage_section);
   }
-  OutputDebugString(L"XXX");
   if (ITH_ENABLE_THREADMAN) {
-	  OutputDebugString(L"YYY");
     NtUnmapViewOfSection(NtCurrentProcess(), ::thread_man_);
     NtClose(::thread_man_section);
   }

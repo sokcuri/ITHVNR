@@ -1,4 +1,4 @@
 #pragma once
 
-void ITH_Init();
-void ITH_CleanUp();
+__declspec(dllexport) void ITH_Init();
+__declspec(dllexport) void ITH_CleanUp();
