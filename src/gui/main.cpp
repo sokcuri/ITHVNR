@@ -17,6 +17,7 @@
 
 #include "main.h"
 #include "ITH.h"
+#include "window.h"
 #include "host/host.h"
 #include "host/hookman.h"
 #include "host/settings.h"
@@ -291,7 +292,10 @@ void ITH_CleanUp()
 	Host_Destroy();
 	//TerminateProcess(GetCurrentProcess(), 0);
 }
-
+void ITH_OpenDialog(int nDlg)
+{
+	OpenDialog(nDlg);
+}
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	ITH_Init();

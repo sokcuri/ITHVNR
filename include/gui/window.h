@@ -18,3 +18,5 @@
 #pragma once
 
 #include "ITH.h"
+
+void OpenDialog(int nDlg);

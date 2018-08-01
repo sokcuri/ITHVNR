@@ -22,6 +22,7 @@
 #include "ProcessWindow.h"
 #include "ProfileManager.h"
 #include "TextBuffer.h"
+#include "main.h"
 #include "host/host.h"
 #include "host/hookman.h"
 #include "hook/const.h"
@@ -307,21 +308,39 @@ void CreateButtons(HWND hWnd)
 		0, 0, 0, 0, hWnd, 0, hIns, NULL);
 }
 
-void ClickButton(HWND hWnd, HWND h)
+void OpenDialog(int nDlg)
 {
-	if (h == hwndProcess)
+	switch (nDlg)
+	{
+	case ITH_PROCESS_DLG:
 	{
 		if (hProcDlg)
 			SetForegroundWindow(hProcDlg);
 		else
 			hProcDlg = CreateDialog(hIns, (LPWSTR)IDD_DIALOG2, 0, ProcessDlgProc);
 	}
-	else if (h == hwndOption)
+		break;
+	case ITH_OPTION_DLG:
 	{
 		if (hOptionDlg)
 			SetForegroundWindow(hOptionDlg);
 		else
 			hOptionDlg = CreateDialog(hIns, (LPWSTR)IDD_DIALOG4, 0, OptionDlgProc);
+	}
+		break;
+		
+	}
+}
+
+void ClickButton(HWND hWnd, HWND h)
+{
+	if (h == hwndProcess)
+	{
+		OpenDialog(ITH_PROCESS_DLG);
+	}
+	else if (h == hwndOption)
+	{
+		OpenDialog(ITH_OPTION_DLG);
 	}
 	else if (h == hwndClear)
 	{
