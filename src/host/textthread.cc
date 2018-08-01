@@ -702,6 +702,9 @@ void TextThread::CopyLastToClipboard()
 		buff2[MB_WC(buff, buff2)] = 0;
 	}
 	OutputDebugString(buff2);
+
+	HWND hwnd = FindWindow(L"AnemoneFrameWindow", nullptr);
+	SendMessage(hwnd, WM_USER + 300, (WPARAM)buff2, 0);
 }
 
 //void TextThread::ResetEditText()
