@@ -389,5 +389,7 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder
 .mfractor/
 
+# Resource temp files
+resources/gui/RC*
 
 # End of https://www.gitignore.io/api/c++,windows,visualstudio
