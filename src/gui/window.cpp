@@ -14,19 +14,19 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "window.h"
-#include "ProcessWindow.h"
 #include "resource.h"
+#include "window.h"
 #include "language.h"
+#include "version.h"
+#include "CustomFilter.h"
+#include "ProcessWindow.h"
+#include "ProfileManager.h"
+#include "TextBuffer.h"
 #include "host/host.h"
 #include "host/hookman.h"
 #include "hook/const.h"
-#include "version.h"
-#include "ProfileManager.h"
 #include "host/settings.h"
-#include "CustomFilter.h"
 #include "profile/Profile.h"
-#include "TextBuffer.h"
 #include "profile/misc.h"
 
 #define CMD_SIZE 512
