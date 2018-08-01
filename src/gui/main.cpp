@@ -286,6 +286,7 @@ void ITH_Init()
 
 void ITH_CleanUp()
 {
+	if (!Host_IsRunning()) return;
 	Host_Close();
 	Host_Destroy();
 	//TerminateProcess(GetCurrentProcess(), 0);

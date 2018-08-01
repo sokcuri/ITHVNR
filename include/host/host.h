@@ -17,6 +17,7 @@ IHFSERVICE void IHFAPI Host_Destroy();
 IHFSERVICE DWORD IHFAPI Host_Start();
 IHFSERVICE BOOL IHFAPI Host_Open();
 IHFSERVICE DWORD IHFAPI Host_Close();
+IHFSERVICE bool IHFAPI Host_IsRunning();
 IHFSERVICE DWORD IHFAPI Host_GetHookManager(HookManager **hookman);
 IHFSERVICE bool IHFAPI Host_GetSettings(Settings **settings);
 IHFSERVICE DWORD IHFAPI Host_GetPIDByName(LPCWSTR pwcTarget);

@@ -354,6 +354,11 @@ IHFSERVICE DWORD IHFAPI Host_Close()
   return result;
 }
 
+IHFSERVICE bool IHFAPI Host_IsRunning()
+{
+	return running;
+}
+
 IHFSERVICE DWORD IHFAPI Host_GetPIDByName(LPCWSTR pwcTarget)
 {
   DWORD dwSize = 0x20000,
