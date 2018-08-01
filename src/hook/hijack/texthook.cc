@@ -655,7 +655,7 @@ int TextHook::UnsafeInsertHookCode()
   }
   // Insert hook and flush instruction cache.
   enum {c8 = 0xcccccccc};
-  DWORD int3[] = {c8, c8};
+  DWORD int3[] = {(DWORD)c8, (DWORD)c8};
   DWORD t = 0x100,
       old,
       len;

@@ -234,7 +234,7 @@ LONG WINAPI UnhandledExcept(_EXCEPTION_POINTERS *ExceptionInfo)
 			}
 		}
 	}
-	std::swprintf(path_name, L"%08X", rec->ExceptionAddress);
+	std::swprintf(path_name, L"%08X", (unsigned int)rec->ExceptionAddress);
 	MessageBox(NULL, path_name, code, MB_OK);
 	TerminateProcess(GetCurrentProcess(), 0);
 	return 0;

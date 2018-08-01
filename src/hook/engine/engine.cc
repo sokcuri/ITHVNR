@@ -16353,7 +16353,7 @@ bool InsertMonoHooks()
       hp.address = (DWORD)addr;
       hp.type = it.hookType|NO_ASCII; // 11/27/2015: Disable ascii string
       hp.offset = it.textIndex * 4;
-      hp.length_offset = it.lengthIndex * 4;
+      hp.length_offset = (WORD)it.lengthIndex * 4;
       hp.text_fun = (HookParam::text_fun_t)it.text_fun;
       ConsoleOutput("vnreng: Mono: INSERT");
       NewHook(hp, it.functionName);

@@ -90,7 +90,7 @@ void CreateNewPipe()
   UNICODE_STRING us;
 
   OBJECT_ATTRIBUTES oa = {sizeof(oa), 0, &us, OBJ_CASE_INSENSITIVE, &sd, 0};
-  LARGE_INTEGER time = {-500000, -1};
+  LARGE_INTEGER time = {(DWORD)-500000, (LONG)-1};
 
   RtlInitUnicodeString(&us, recv_pipe);
   if (!NT_SUCCESS(NtCreateNamedPipeFile(
